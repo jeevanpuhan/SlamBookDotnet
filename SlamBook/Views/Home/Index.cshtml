@@ -1,0 +1,41 @@
+﻿@model List<Friend>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Jhalak's Slam Book</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <table class="table">
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Favourite Color</th>
+                        <th>Best Friend</th>
+                    </thead>
+                    <tbody>
+                        @foreach (var friend in Model)
+                        {
+                            <tr>
+                                <td>@friend.FirstName</td>
+                                <td>@friend.LastName</td>
+                                <td>@friend.Email</td>
+                                <td>@friend.Phone</td>
+                                <td>@friend.Address</td>
+                                <td>@friend.FavouriteColor</td>
+                                <td>@friend.BestFriend</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+</div>

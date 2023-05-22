@@ -1,0 +1,45 @@
+﻿@model Friend;
+@{
+    ViewData["Title"] = "Add New Friend";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Add a New Friend</h2>
+            <form asp-action="AddFriend" method="post">
+                <div class="mb-3">
+                    <label asp-for="FirstName" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="FirstName" placeholder="Your First Name">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="LastName">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input type="email" class="form-control" asp-for="Email">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Phone" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="Phone">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Address" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="Address">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="FavouriteColor" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="FavouriteColor">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BestFriend" class="form-label"></label>
+                    <input type="text" class="form-control" asp-for="BestFriend">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary">Add Friend</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
